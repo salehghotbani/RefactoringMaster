@@ -4,9 +4,9 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Course {
-	private String id;
-	private String name;
-	private int units;
+	private final String id;
+	private final String name;
+	private final int units;
 	
 	List<Course> prerequisites;
 
@@ -14,7 +14,7 @@ public class Course {
 		this.id = id;
 		this.name = name;
 		this.units = units;
-		prerequisites = new ArrayList<Course>();
+		prerequisites = new ArrayList<>();
 	}
 	
 	public void addPre(Course c) {
@@ -53,6 +53,7 @@ public class Course {
 	public String getId() {
 		return id;
 	}
+
 
 	public boolean equals(Object obj) {
 		Course other = (Course)obj;

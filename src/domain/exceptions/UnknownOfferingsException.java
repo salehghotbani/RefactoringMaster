@@ -12,5 +12,4 @@ public class UnknownOfferingsException extends Exception {
     public ArrayList<String> getMissingIds() {
         return missingIds;
     }
-
 }

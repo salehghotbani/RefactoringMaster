@@ -1,9 +1,11 @@
 package domain.exceptions;
 
-public class EnrollmentRulesViolationException extends Exception {
+import javax.swing.*;
+
+public class EnrollmentRulesViolationException {
 
     public EnrollmentRulesViolationException(String msg) {
-        super(msg);
+        //show visual messagebox of error
+        JOptionPane.showMessageDialog(null, "Enrollment Rules Violation Exception occurred!\nMessage: " + msg, "Error", JOptionPane.ERROR_MESSAGE);
     }
-
 }

@@ -5,11 +5,10 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Course {
+    private List<Course> prerequisites; //lists of prerequisites
     private final String id;
     private final String name;
     private final int units;
-
-    List<Course> prerequisites;
 
     public Course(String id, String name, int units) {
         this.id = id;
@@ -18,12 +17,8 @@ public class Course {
         prerequisites = new ArrayList<>();
     }
 
-    public void addPre(Course c) {
-        getPrerequisites().add(c);
-    }
-
     public Course withPre(Course... pres) {
-        prerequisites.addAll(Arrays.asList(pres));
+        getPrerequisites().addAll(Arrays.asList(pres));
         return this;
     }
 
@@ -55,9 +50,7 @@ public class Course {
         return id;
     }
 
-
-    public boolean equals(Object obj) {
-        Course other = (Course) obj;
-        return id.equals(other.id);
+    public boolean equals(Course obj) {
+        return id.equals(obj.getId());
     }
 }

@@ -8,6 +8,8 @@ import java.util.Map;
 public class Student {
     private final String id;
     private final String name;
+    private final Map<Term, Map<Course, Double>> transcript; // courses that passed with this student
+    private final List<CourseSection> currentTerm; // lists of courses in current term
 
     static class CourseSection {
         Course course;
@@ -18,9 +20,6 @@ public class Student {
             this.section = section;
         }
     }
-
-    private final Map<Term, Map<Course, Double>> transcript;
-    private final List<CourseSection> currentTerm;
 
     public Student(String id, String name) {
         this.id = id;

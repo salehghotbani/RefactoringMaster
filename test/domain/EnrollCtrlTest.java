@@ -12,7 +12,6 @@ import javax.swing.*;
 public class EnrollCtrlTest {
     // Students name
     private Student bebe;
-    private Student bebe2;
     // Courses name
     private Course prog, ap, dm, math1, math2, phys1, phys2, maaref, farsi, english, akhlagh, economy, karafarini;
 
